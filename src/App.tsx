@@ -7,7 +7,8 @@ import {BrowserRouter as Router, Routes, Route, BrowserRouter} from 'react-route
 // components
 import Home from './components/Home';
 import Main from "./components/Main";
-import LoginUser from "./components/LoginUser";
+import LoginUser from "./components/login/LoginUser";
+import Register from "./components/login/Register";
 
 
 
@@ -43,6 +44,7 @@ return (
                 <Route path="/" element={<Main/>}/>
                 <Route path={"/home"} element={<Home/>} />
                 <Route path={"/login"} element={<LoginUser/>} />
+                <Route path={"/register"} element={<Register/>} />
             </Routes>
         </BrowserRouter>
 

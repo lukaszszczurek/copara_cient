@@ -2,9 +2,10 @@ import React from 'react';
 import {MDCTextField} from '@material/textfield';
 import styled from "styled-components";
 import {Button} from "@mui/material";
-import User from "../types/CoreTypes";
+import User from "../../types/CoreTypes";
 import axios from "axios";
 import {toast, ToastContainer} from "react-toastify";
+import {saveJwtToken} from "../../auth/jwtService";
 
 function LoginUser(props: any) {
 
@@ -27,7 +28,16 @@ function LoginUser(props: any) {
     const handleSubmit = async () => {
         const response = await axios.post('http://localhost:8080/api/v1/auth/register', {email:email, password:password});
         console.log(response.data);
+
+        saveJwtToken(response.data.token);
     };
+
+    const handleLogin = async () => {
+        const response = await axios.post('http://localhost:8080/api/v1/auth/authenticate', {email:email, password:password});
+        console.log(response.data);
+
+        saveJwtToken(response.data.token);
+    }
 
     // Define the login function that will be called when the user submits the form
     const login = async (username:string, password:string) => {
@@ -75,7 +85,7 @@ function LoginUser(props: any) {
                 </div>
                 </div>
 
-            <Button variant="contained" color="primary" onClick={handleSubmit}>Login</Button>
+            <Button variant="contained" color="primary" onClick={handleLogin}>Login</Button>
         </div>
 
 
