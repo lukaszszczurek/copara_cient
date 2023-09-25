@@ -2,7 +2,6 @@ import React from 'react';
 import {MDCTextField} from '@material/textfield';
 import styled from "styled-components";
 import {Button} from "@mui/material";
-import User from "../../types/CoreTypes";
 import axios from "axios";
 import {toast, ToastContainer} from "react-toastify";
 import {saveJwtToken} from "../../auth/jwtService";

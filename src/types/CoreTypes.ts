@@ -1,12 +1,3 @@
-// private ObjectId id;
-//     private String email;
-//     private String password;
-//     private String name;
-//     private String surname;
-//     private String nickName;
-//     private String photoUrl;
-
-
 interface User {
     id: string,
     name: string,
