@@ -9,6 +9,7 @@ import Home from './components/Home';
 import Main from "./components/Main";
 import LoginUser from "./components/login/LoginUser";
 import Register from "./components/login/Register";
+import LoftHomeView from "./components/lofts/LoftHomeView";
 
 
 
@@ -45,6 +46,7 @@ return (
                 <Route path={"/home"} element={<Home/>} />
                 <Route path={"/login"} element={<LoginUser/>} />
                 <Route path={"/register"} element={<Register/>} />
+                <Route path={`/myLofts/*`} element={<LoftHomeView/>} />
             </Routes>
         </BrowserRouter>
 
