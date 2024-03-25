@@ -105,10 +105,14 @@ function LoginUser() {
 
             <div className="mdc-text-field mdc-text-field--outlined">
                 <StyledInput type="text" id="email" className="mdc-text-field__input" placeholder="Email..."
-                onChange={(e) => {setEmail(e.target.value)}}
+                             onChange={(e) => {
+                                 setEmail(e.target.value)
+                             }}
                 />
                 <StyledInput type="password" id="password" className="mdc-text-field__input" placeholder="Password..."
-                onChange={(e) => {setPassword(e.target.value)}}
+                             onChange={(e) => {
+                                 setPassword(e.target.value)
+                             }}
                 />
                 <div className="mdc-notched-outline">
                     <div className="mdc-notched-outline__leading"/>
@@ -117,14 +121,17 @@ function LoginUser() {
                     </div>
                     <div className="mdc-notched-outline__trailing"/>
                 </div>
-                </div>
+            </div>
 
             <Button variant="contained" color="primary" onClick={handleLogin}>Login</Button>
 
             <h3> Adam@ziut.pl</h3>
             <h3> password</h3>
-        </div>
+            <h1>-----</h1>
+            <h3>Ricky@gmail.ocm</h3>
+            <h3>password</h3>
 
+        </div>
 
 
     );
