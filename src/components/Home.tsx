@@ -19,7 +19,7 @@ function Home() {
 
         await axios.get(urls, {headers: {'Authorization': 'Bearer ' + TOKEN}})
             .then(response => {
-                console.log(response.data);
+
                 setLoftData(response.data);
                 setViewLoft(true);
 
@@ -28,16 +28,17 @@ function Home() {
 
     useEffect(() => {
 
-        setData(getUserData(BASE_URL + "/users/" + tokenData.sub, TOKEN));
-        console.log("IN MAIN : " + data.email)
+        axios.get(BASE_URL + "/users/" + tokenData.sub, {headers: {'Authorization': 'Bearer ' + TOKEN}})
+            .then(response => {
+                setData(response.data);
+            }).catch(error => console.log(error));
 
-        const fetchData = async () : Promise <any> => {
-            const data = await getUserData(BASE_URL + "/users/" + tokenData.sub, TOKEN);
-            setData(data);
-            console.log("IN MAIN : " + data.email)
-        };
+       // setData(getUserData(BASE_URL + "/users/" + tokenData.sub, TOKEN));
+        // const fetchData = async () : Promise <any> => {
+        //     const data = await getUserData(BASE_URL + "/users/" + tokenData.sub, TOKEN);
+        //     setData(data);
+        // };
 
-        fetchData();
       
     }, []);
 
