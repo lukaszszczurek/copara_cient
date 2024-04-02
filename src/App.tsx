@@ -6,7 +6,7 @@ import { Routes, Route, BrowserRouter} from 'react-router-dom';
 
 // components
 import Home from './components/Home';
-import Main from "./components/Main";
+import Main from "./pages/Main";
 import LoginUser from "./components/login/LoginUser";
 import Register from "./components/login/Register";
 import LoftHomeView from "./components/lofts/LoftHomeView";
