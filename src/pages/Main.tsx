@@ -7,6 +7,9 @@ import StyledCarousel from "../components/Main/StyledCarousel";
 import AboutTutor from "../components/Main/AboutTutor";
 import TEST from "../components/Main/TEST";
 import Nawbar from "../components/Main/Nawbar";
+import Title from "../components/Main/Title";
+
+
 
 function Main() {
 
@@ -16,11 +19,11 @@ function Main() {
     return (
         <div>
             <Nawbar/>
-            <Typography variant={"h2"}>Kuźnia Olimpijska</Typography>
+            {/*<Title name="Kuźnia olimpijska"/>*/}
             <Container>
                 <StyledCarousel/>
-                {/*<AboutTutor/>*/}
-                <TEST/>
+                <AboutTutor/>
+                {/*<TEST/>*/}
 
 
 
@@ -36,7 +39,7 @@ const Container = styled.div`
     min-height:100vh;
     overflow-x: hidden;
     display: block;
-    top:72px;
+    top:36px;
     padding: 0 3.5vh+3px;
     
 
